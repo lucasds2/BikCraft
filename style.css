@@ -1,0 +1,710 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+}
+ 
+:target {
+  scroll-margin-top: .8em;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* CONTAINER PRINCIPAL */
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+
+
+
+/* HEADER */
+
+header {
+  background: rgb(254, 198, 62);
+  padding: 15px;
+  padding-bottom: 12px;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  z-index: 10;
+}
+
+
+
+/* MENU HEADER */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  margin-left: 19%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.3s;
+  letter-spacing: 0.1em;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+.menu a:hover {
+  color: white;
+}
+
+
+
+
+/* SECTION INTRODUÇÃO */
+
+.section {
+  background: url("https://bikcraft.com/wp-content/uploads/2015/10/bg.jpg")
+    no-repeat center;
+  background-size: cover;
+  text-align: center;
+  padding-top: 80px;
+  margin-top: 92px;
+  width: 100%;
+  height: 380px;
+}
+
+.section .introducao {
+  color: white;
+}
+
+.section .introducao h1 {
+  font-size: 48px;
+}
+
+.text p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  font-style: italic;
+  max-width: 300px;
+  line-height: 20px;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.text p::before {
+  content: "";
+  display: block;
+  width: 60px;
+  margin: 0 auto;
+  height: 3px;
+  background: #ffffff;
+  margin-bottom: 14px;
+}
+
+.text p::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 60px;
+  height: 3px;
+  margin-top: 14px;
+  margin-bottom: 10px;
+  background: #ffffff;
+}
+
+cite {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.pbutton3 {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.pbutton3 p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  margin-bottom: 23px;
+}
+
+.pbutton3 a {
+  color: #fec63e;
+  border: 3px solid;
+  padding: 10px 30px;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.pbutton3 a:hover {
+  color: white;
+  cursor: pointer;
+}
+
+
+/* SECTION PRODUTOS */
+
+.section-produtos h1 {
+  text-align: center;
+  margin-top: 60px;
+  letter-spacing: 0.1em;
+  margin-bottom: 40px;
+  font-size: 25px;
+}
+
+.section-produtos h1:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 55px;
+  height: 3px;
+  margin-top: 14px;
+  margin-bottom: 10px;
+  background: black;
+}
+
+.section-produtos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-lista {
+  display: flex;
+}
+
+.menu-lista .produtos_icone {
+  background: black;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.grid-1-3 {
+  width: 300px;
+}
+
+.menu-lista li {
+  text-align: center;
+  background: #fec63e;
+  list-style: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.menu-lista h3 {
+  padding-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.menu-lista h3::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 55px;
+  height: 3px;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  background: black;
+}
+
+.menu-lista p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  margin: 0 20px;
+  line-height: 20px;
+  padding-bottom: 10px;
+}
+.pbutton {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.pbutton p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  margin-bottom: 23px;
+}
+
+.pbutton a {
+  color: #fec63e;
+  border: 3px solid;
+  padding: 10px 30px;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.pbutton a:hover {
+  color: black;
+  cursor: pointer;
+}
+
+
+
+
+/* SECTION PORTFOLIO */
+
+.portfolio {
+  background: black;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.portfolio h1 {
+  text-align: center;
+  color: #fec63e;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  margin-bottom: 35px;
+  padding-top: 30px;
+}
+
+.portfolio h1::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 55px;
+  height: 3px;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  background: #fec63e;
+}
+
+.portfolio ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.img-ul {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr;
+  max-width: 900px;
+}
+
+.img-ul img {
+  width: 100%;
+  height: 100%;
+}
+
+.img-ul :nth-last-child(1) {
+  grid-column: 1 / 3;
+}
+
+.portdiv {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.portfolio p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  color: white;
+  margin-bottom: 14px;
+}
+
+.portfolio a {
+  color: #fec63e;
+  border: 3px solid;
+  padding: 10px 30px;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.portfolio a:hover {
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+/* SECTION QUALIDADE */
+
+.qualidade {
+  text-align: center;
+}
+
+.subtitulo {
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+
+.qualidade h2:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 55px;
+  height: 3px;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  background: black;
+}
+
+.qualidade img {
+  margin-bottom: 50px;
+}
+
+.lista-qualidade {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style: none;
+  padding: 0;
+  padding-bottom: 40px;
+}
+
+.qualidade h3 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.1em;
+}
+
+.qualidade h3:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 55px;
+  height: 3px;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  background: black;
+}
+
+.qualidade li p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  line-height: 20px;
+  max-width: 250px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.pbutton2 {
+  text-align: center;
+}
+
+.pbutton2 p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  padding-bottom: 22px;
+}
+
+.pbutton2 a {
+  color: #fec63e;
+  border: 3px solid;
+  padding: 10px 30px;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.pbutton2 a:hover {
+  color: black;
+  cursor: pointer;
+}
+
+
+
+
+
+/* DIV BREAK */
+
+.break {
+  background: url("https://bikcraft.com/wp-content/uploads/2015/10/bg-footer.jpg")
+    no-repeat center;
+  background-size: cover;
+}
+
+.break {
+  width: 100%;
+  min-width: 200px;
+  overflow: hidden;
+  height: 220px;
+  text-align: center;
+  margin-top: 60px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.break blockquote {
+  max-width: 400px;
+}
+
+
+
+
+/* FOOTER */
+
+.footerprincipal {
+  background: black;
+  min-width: 200px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.footerprincipal .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 20px auto;
+}
+
+.footerprincipal .grid-8 {
+  width: 460px;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footerprincipal .grid-4 {
+  width: 220px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footerprincipal h3 {
+  color: #fec63e;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+.footerprincipal h3::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 3px;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  background: #fec63e;
+}
+
+.footerprincipal p {
+  color: white;
+}
+
+.footerprincipal span {
+  color: white;
+}
+
+.footerprincipal img {
+  border: 3px solid #fec63e;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.nossa_historia {
+  padding-right: 30px;
+}
+
+.nossa_historia p,
+.contato p,
+.redes_sociais p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  color: white;
+  line-height: 20px;
+}
+
+.nossa_historia span,
+.contato span,
+.redes_sociais span {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  color: white;
+  line-height: 20px;
+}
+
+.nossa_historia span,
+.contato span,
+.redes_sociais span {
+  display: inline-block;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.fim {
+  background: #fec63e;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-around;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+}
+
+
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 300px;
+  }
+
+  .header {
+    position: relative;
+    width: auto;
+    padding: 25px 0 20px 0;
+  }
+
+  .header img{
+    display: block;
+    max-width: 100%;
+    margin: 0 15px 10px 5px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+  
+  nav li {
+    margin: 0 auto;
+    position: relative;
+    left: 4%;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 165px;
+    margin: 0 auto;
+  }
+
+  .menu a {
+    float: left;
+    width: 100px;
+    text-align: center;
+  }
+
+  .menu li {
+    padding: 10px 10px;
+    border: 4px solid black;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .menu li:hover {
+    color: white;
+    border-color: white;
+  }
+
+  .section {
+    margin: 0;
+    padding-top: 85px;
+    height: 450px;
+  }
+
+  .menu-lista {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .menu-lista li {
+    margin-top: 20px;
+  }
+
+  .lista-qualidade {
+    grid-template-columns: 1fr;
+    padding-bottom: 5px;
+  }
+
+  .lista-qualidade li p {
+    padding-bottom: 30px;
+  }
+
+  .footerprincipal .container {
+    grid-template-columns: 1fr;
+  }
+
+  .footerprincipal .grid-4 span,
+  .footerprincipal .grid-8 span {
+    width: 300px;
+    margin: 0 0 20px 0;
+    float: none;
+  }
+
+  .contato {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .container {
+    width: 768px;
+  }
+
+  .grid-1-3 {
+    width: 236px;
+  }
+  .footerprincipal .grid-4 {
+    width: 172px;
+  }
+
+  .footerprincipal .grid-4 {
+    width: 172px;
+  }
+
+  .footerprincipal .grid-8 {
+    width: 364px;
+    margin-right: 50px;
+  }
+}
