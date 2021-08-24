@@ -1,0 +1,663 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+}
+ 
+:target {
+  scroll-margin-top: .8em;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+/* CONTAINER PRINCIPAL */
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+
+
+
+/* HEADER */
+
+header {
+  background: rgb(254, 198, 62);
+  padding: 15px;
+  padding-bottom: 12px;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  z-index: 10;
+}
+
+
+
+/* HEADER MENU */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  margin-left: 19%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.3s;
+  letter-spacing: 0.1em;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+.menu a:hover {
+  color: white;
+}
+
+.menu li a.active {
+  color: white;
+}
+
+
+
+
+/* SECTION COMEÇO */
+
+.comeco {
+  background: url("https://bikcraft.com/wp-content/uploads/2015/10/bg-produtos.jpg")
+    no-repeat center;
+  background-size: cover;
+}
+
+.comeco {
+  width: 100%;
+  height: 140px;
+  margin-top: 92px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.comeco h1 {
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.comeco p::before {
+  content: "";
+  display: block;
+  width: 60px;
+  margin: 0 auto;
+  height: 3px;
+  background: #ffffff;
+  margin-bottom: 10px;
+}
+
+.comeco p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  max-width: 300px;
+  line-height: 20px;
+  margin: 0 auto;
+  margin-top: 6px;
+}
+
+.comeco p {
+  color: white;
+}
+
+
+
+
+/* SECTION PRODUTO */
+
+.item-produto {
+  padding-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-11 {
+  width: 640px;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.grid-11 img {
+  display: block;
+  max-width: 100%;
+}
+
+.grid-5 {
+  width: 280px;
+}
+
+.grid-11,
+.grid-5 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.grid-5 img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.grid-11 h2 {
+  font-size: 36px;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  position: relative;
+  top: -180px;
+  color: white;
+  text-align: center;
+  margin-bottom: -79px;
+}
+
+.grid-11 h2::after {
+  content: "";
+  display: block;
+  margin: 6px auto 8px auto;
+  width: 55px;
+  height: 3px;
+  background: white;
+}
+
+.grid-11 h2::before {
+  content: "";
+  display: block;
+  margin: 6px auto 8px auto;
+  width: 60px;
+  height: 3px;
+  background: white;
+}
+
+.produto_icone {
+  background: black;
+  padding: 70px 0;
+}
+
+
+
+
+/* FORM ORÇAMENTO */
+
+.orcamento {
+  width: 100%;
+  margin-top: 60px;
+  padding: 40px 0;
+  background: black;
+}
+
+.orcamento .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+form {
+  width: 460px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 4px;
+  padding-right: 60px;
+  color: white;
+}
+
+form input {
+  width: 100%;
+  border: none;
+  background: black;
+  color: white;
+  border: solid 4px #fec63e;
+  padding: 8px;
+  margin-bottom: 10px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+form textarea {
+  display: block;
+  width: 100%;
+  height: 120px;
+  border: 4px solid #fec63e;
+  background: none;
+  color: white;
+  padding: 7px 10px;
+  margin-bottom: 20px;
+  outline: none;
+  font-size: 14px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.btn {
+  border: none;
+  border: 3px solid #fec63e;
+  padding: 7px 40px;
+  background: transparent;
+  color: #fec63e;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  transition: all 0.5s ease;
+}
+
+.btn:hover {
+  border-color: white;
+  color: white;
+  cursor: pointer;
+}
+
+.aviso{
+  font-size: 12px;
+  margin-top: 5px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+
+.orcamento h2 {
+  color: #fec63e;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.orcamento h2::after {
+  content: "";
+  display: block;
+  margin: 6px auto 8px auto;
+  width: 60px;
+  height: 3px;
+  background: #fec63e;
+}
+
+.orcamento-2 h3 {
+  color: #fec63e;
+}
+
+.orcamento-2 span {
+  display: block;
+  font-size: 18px;
+  line-height: 30px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.orcamento-2 span:nth-of-type(even) {
+  margin-bottom: 40px;
+}
+
+.orcamento-2 {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+}
+
+.orcamento-2 p {
+  margin: 8px 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.orcamento-2 ul {
+  list-style: none;
+}
+
+.orcamento-2 ul li {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+.orcamento-2 li:nth-child(odd) {
+  background: #1d1d1d;
+}
+
+
+
+/* DIV BREAK */
+
+.break {
+  background: url("https://bikcraft.com/wp-content/uploads/2015/10/bg-footer.jpg")
+    no-repeat center;
+  background-size: cover;
+}
+
+.break {
+  width: 100%;
+  min-width: 200px;
+  overflow: hidden;
+  height: 220px;
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.break p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  font-style: italic;
+  max-width: 300px;
+  line-height: 20px;
+  margin-top: 15px;
+  color: white;
+}
+
+.break p::before {
+  content: "";
+  display: block;
+  width: 60px;
+  margin: 0 auto;
+  height: 3px;
+  background: #ffffff;
+  margin-bottom: 14px;
+}
+
+.break p::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 60px;
+  height: 3px;
+  margin-top: 14px;
+  margin-bottom: 10px;
+  background: #ffffff;
+}
+
+cite {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+
+
+
+
+/* FOOTER */
+
+.footerprincipal {
+  background: black;
+  min-width: 200px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.footerprincipal .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 20px auto;
+}
+
+.footerprincipal h3 {
+  color: #fec63e;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+.footerprincipal h3::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 3px;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  background: #fec63e;
+}
+
+.footerprincipal p {
+  color: white;
+}
+
+.footerprincipal span {
+  color: white;
+}
+
+.footerprincipal .grid-8 {
+  width: 460px;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footerprincipal .grid-4 {
+  width: 220px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+.footerprincipal img {
+  border: 3px solid #fec63e;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.nossa_historia {
+  padding-right: 30px;
+}
+
+.nossa_historia p,
+.contato p,
+.redes_sociais p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  color: white;
+  line-height: 20px;
+}
+
+.nossa_historia span,
+.contato span,
+.redes_sociais span {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  color: white;
+  line-height: 20px;
+}
+
+.nossa_historia span,
+.contato span,
+.redes_sociais span {
+  display: inline-block;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.fim {
+  background: #fec63e;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-around;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+}
+
+
+
+
+/* RESPONSIVE */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .container {
+    width: 768px;
+  }
+
+  .item-produto h2 {
+    top: -150px;
+  }
+
+  .grid-11 {
+    width: 508px;
+  }
+
+  .grid-5 {
+    width: 220px;
+  }
+
+  .produto_icone {
+    padding: 41px 0;
+  }
+
+  .grid-25 {
+    width: 364px;
+    margin: 0 0 20px 0;
+  }
+
+  .footerprincipal .grid-4 {
+    width: 172px;
+  }
+
+  .footerprincipal .grid-4 {
+    width: 172px;
+  }
+
+  .footerprincipal .grid-8 {
+    width: 364px;
+    margin-right: 50px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 300px;
+  }
+
+  .header {
+    position: relative;
+    width: auto;
+    padding: 25px 0 20px 0;
+  }
+
+  .header img{
+    display: block;
+    max-width: 100%;
+    margin: 0 15px 10px 5px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 0 auto;
+    position: relative;
+    left: 4%;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 165px;
+    margin: 0 auto;
+  }
+
+  .menu li {
+    padding: 10px 10px;
+    border: 4px solid black;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .menu a {
+    float: left;
+    width: 100px;
+    text-align: center;
+  }
+
+  .menu li:hover {
+    color: white;
+    border-color: white;
+  }
+
+  .comeco {
+    margin: 0;
+  }
+
+  .item-produto {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-11,
+  .grid-5 {
+    width: 300px;
+    margin: 0 0 20px 0;
+  }
+
+  .grid-11 h2 {
+    top: -100px;
+  }
+
+  .produto_icone {
+    padding: 41px 0;
+  }
+
+  .orcamento .container {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-25 {
+    width: 300px;
+    margin: 0 0 30px 0;
+  }
+
+  .contato_form {
+    padding-right: 0;
+  }
+
+  .footerprincipal .container {
+    grid-template-columns: 1fr;
+  }
+
+  .footerprincipal .grid-4 span,
+  .footerprincipal .grid-8 span {
+    width: 300px;
+    margin: 0 0 20px 0;
+    float: none;
+  }
+
+  .contato {
+    margin-bottom: 20px;
+  }
+}
