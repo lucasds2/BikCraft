@@ -1,0 +1,656 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+}
+ 
+:target {
+  scroll-margin-top: .8em;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background: rgb(254, 198, 62);
+  padding: 15px;
+  padding-bottom: 12px;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  margin-left: 19%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.3s;
+  letter-spacing: 0.1em;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+.menu a:hover {
+  color: white;
+}
+
+.menu li a.active {
+  color: white;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 300px;
+  }
+}
+
+.comeco {
+  background: url("https://bikcraft.com/wp-content/uploads/2015/10/bg-contato.jpg")
+    no-repeat center;
+  background-size: cover;
+}
+
+.comeco {
+  width: 100%;
+  height: 140px;
+  margin-top: 92px;
+  text-align: center;
+  padding-top: 30px;
+ 
+}
+
+.comeco h1 {
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.comeco h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  margin: 0 auto;
+  height: 3px;
+  background: #ffffff;
+  margin-top: 5px;
+}
+
+.comeco p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  max-width: 300px;
+  line-height: 20px;
+  margin: 0 auto;
+  margin-top: 6px;
+}
+
+.comeco p {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 0 auto;
+    position: relative;
+    left: 4%;
+  }
+
+  .header {
+    position: relative;
+    width: auto;
+    padding: 25px 0 20px 0;
+  }
+
+  .header img{
+    display: block;
+    max-width: 100%;
+    margin: 0 15px 10px 5px;
+  }
+
+  .comeco {
+    margin: 0;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 165px;
+    margin: 0 auto;
+  }
+
+  .menu a {
+    float: left;
+    width: 100px;
+    text-align: center;
+  }
+
+  .menu li {
+    padding: 10px 10px;
+    border: 4px solid black;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .menu li:hover {
+    color: white;
+    border-color: white;
+  }
+}
+
+.formSection {
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+
+form {
+  width: 460px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 4px;
+  padding-right: 60px;
+}
+
+.form_div input {
+  width: 100%;
+  border: none;
+  border: solid 4px #fec63e;
+  padding: 8px;
+  margin-bottom: 10px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.form_div textarea {
+  display: block;
+  width: 100%;
+  height: 120px;
+  border: 4px solid #fec63e;
+  background: none;
+  padding: 7px 10px;
+  margin-bottom: 20px;
+  outline: none;
+  font-size: 14px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.btn {
+  border: none;
+  border: 3px solid #fec63e;
+  padding: 7px 40px;
+  background: transparent;
+  color: #fec63e;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  transition: all 0.5s ease;
+}
+
+.btn:hover {
+  border-color: black;
+  color: black;
+  cursor: pointer;
+}
+
+.aviso{
+  font-size: 12px;
+  margin-top: 5px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+
+.dados h3 {
+  color: #fec63e;
+}
+
+.dados span {
+  display: block;
+  font-size: 18px;
+  line-height: 30px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.dados span:nth-of-type(even) {
+  margin-bottom: 30px;
+}
+
+.dados ul {
+  list-style: none;
+}
+
+.dados {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.dados li {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.dados img {
+  border: 3px solid #fec63e;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.dados img:hover {
+  border-color: black;
+  cursor: pointer;
+}
+
+.map img {
+  max-width: 100%;
+  display: block;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .container {
+    width: 768px;
+  }
+}
+
+textarea {
+  overflow: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .formSection {
+    grid-template-columns: 1fr;
+    width: 300px;
+    grid-gap: 40px;
+  }
+
+  .contato_form {
+    padding-right: 0px;
+    margin-bottom: 40px;
+  }
+
+  .grid-8 {
+    width: 300px;
+    margin: 0 0 20px 0;
+    float: none;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .dados {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .form_div .grid-8 {
+    width: 364px;
+  }
+}
+
+.qualidade {
+  text-align: center;
+}
+
+.subtitulo {
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+
+.qualidade h2:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 55px;
+  height: 3px;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  background: black;
+}
+
+.qualidade img {
+  margin-bottom: 50px;
+}
+
+.lista-qualidade {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style: none;
+  max-width: 1000px;
+  padding: 0;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+.qualidade h3 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.1em;
+}
+
+.qualidade h3:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 55px;
+  height: 3px;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  background: black;
+}
+
+.qualidade li p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  line-height: 20px;
+  max-width: 250px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.break {
+  background: url("https://bikcraft.com/wp-content/uploads/2015/10/bg-footer.jpg")
+    no-repeat center;
+  background-size: cover;
+}
+
+.break {
+  width: 100%;
+  min-width: 200px;
+  overflow: hidden;
+  height: 220px;
+  text-align: center;
+  margin-top: 60px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.break p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  font-style: italic;
+  max-width: 300px;
+  line-height: 20px;
+  margin-top: 15px;
+  color: white;
+}
+
+.break p::before {
+  content: "";
+  display: block;
+  width: 60px;
+  margin: 0 auto;
+  height: 3px;
+  background: #ffffff;
+  margin-bottom: 14px;
+}
+
+.break p::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 60px;
+  height: 3px;
+  margin-top: 14px;
+  margin-bottom: 10px;
+  background: #ffffff;
+}
+
+cite {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 768px) {
+  .lista-qualidade {
+    grid-template-columns: 1fr;
+    padding-bottom: 5px;
+  }
+
+  .lista-qualidade li p {
+    padding-bottom: 30px;
+  }
+}
+
+.footerprincipal {
+  background: black;
+  padding-bottom: 40px;
+  min-width: 200px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.footerprincipal .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 20px auto;
+}
+
+.footerprincipal .grid-8 {
+  width: 460px;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footerprincipal .grid-4 {
+  width: 220px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footerprincipal h3 {
+  color: #fec63e;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+.footerprincipal h3::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 3px;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  background: #fec63e;
+}
+
+.footerprincipal p {
+  color: white;
+}
+
+.footerprincipal span {
+  color: white;
+}
+
+.footerprincipal img {
+  border: 3px solid #fec63e;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.historia {
+  padding-right: 40px;
+}
+
+.historia p,
+.contato p,
+.redes_sociais p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  color: white;
+  line-height: 20px;
+}
+
+.historia span,
+.contato span,
+.redes_sociais span {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  color: white;
+  line-height: 20px;
+}
+
+.historia span,
+.contato span,
+.redes_sociais span {
+  display: inline-block;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.footersecundaria {
+  background: #fec63e;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-around;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .footerprincipal .grid-4 {
+    width: 172px;
+  }
+
+  .footerprincipal .grid-4 {
+    width: 172px;
+  }
+
+  .footerprincipal .grid-8 {
+    width: 364px;
+    margin-right: 50px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footerprincipal .container {
+    grid-template-columns: 1fr;
+  }
+
+  .footerprincipal .grid-4 span,
+  .footerprincipal .grid-8 span {
+    width: 300px;
+    margin: 0 0 20px 0;
+    float: none;
+  }
+
+  .contato {
+    margin-bottom: 20px;
+  }
+}
+
+/* ANIMATIONS */
+
+.comeco h1 {
+  transition: 0.3s all ease;
+  animation-duration: 1s;
+  animation-name: load, movimentation;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.comeco p {
+  transition: 0.3s all ease;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-name: load, movimentation1;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.form_div,
+.dados {
+  transition: 0.3s all ease;
+  animation-name: formMove, load;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-delay: 0.8s;
+}
+
+@keyframes load {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes movimentation {
+  from {
+    transform: translate3d(0, -70%, 0);
+  }
+}
+
+@keyframes movimentation1 {
+  from {
+    transform: translate3d(0, -70%, 0);
+  }
+}
+
+@keyframes formMove {
+  from {
+    transform: translate3d(0, -7%, 0);
+  }
+}
