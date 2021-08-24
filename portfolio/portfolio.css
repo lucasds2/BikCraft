@@ -1,0 +1,545 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+}
+ 
+:target {
+  scroll-margin-top: .8em;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background: rgb(254, 198, 62);
+  padding: 15px;
+  padding-bottom: 12px;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  margin-left: 19%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.3s;
+  letter-spacing: 0.1em;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+.menu a:hover {
+  color: white;
+}
+
+.menu li a.active {
+  color: white;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 300px;
+  }
+}
+
+.comeco {
+  background: url("https://bikcraft.com/wp-content/uploads/2015/10/bg-portfolio.jpg")
+    no-repeat center;
+  background-size: cover;
+}
+
+.comeco {
+  width: 100%;
+  height: 140px;
+  margin-top: 92px;
+  text-align: center;
+  padding-top: 30px;
+  transition: all 0.3s;
+}
+
+.comeco h1 {
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.comeco h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  margin: 0 auto;
+  height: 3px;
+  background: #ffffff;
+  margin-top: 5px;
+}
+
+.comeco p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  max-width: 300px;
+  line-height: 20px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.comeco p {
+  color: white;
+}
+
+.feedback {
+  position: relative;
+}
+
+.clientes {
+  max-width: 470px;
+  display: none;
+  margin: 0 auto;
+  padding: 60px 0;
+  position: absolute;
+  opacity: 0;
+}
+
+.clientes.selected {
+  position: relative;
+  display: block;
+  opacity: 1;
+  animation: load .5s;
+}
+
+.clientes p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 25px;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.clientes cite {
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  float: right;
+}
+
+.portfolio {
+  background: black;
+  padding: 40px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.portfolio h1 {
+  text-align: center;
+  color: #fec63e;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  margin-bottom: 35px;
+  padding-top: 30px;
+}
+
+.portfolio h1::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 55px;
+  height: 3px;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  background: #fec63e;
+}
+
+.portfolio ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.img-ul {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr;
+  max-width: 900px;
+}
+
+.img-ul img {
+  width: 100%;
+  height: 100%;
+}
+
+.img-ul :nth-last-child(1) {
+  grid-column: 1 / 3;
+}
+
+.img-ul {
+  position: absolute;
+  opacity: 0;
+  display: none;
+}
+
+.img-ul.selected1 {
+  position: relative;
+  opacity: 1;
+  display: grid;
+  animation-name: load;
+  animation-duration: .5s;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 0 auto;
+    position: relative;
+    left: 4%;
+  }
+
+  .header img{
+    display: block;
+    max-width: 100%;
+    margin: 0 15px 10px 5px;
+  }
+
+  .header {
+    position: relative;
+    width: auto;
+    padding: 25px 0 20px 0;
+  }
+
+  .comeco {
+    margin: 0;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 165px;
+    margin: 0 auto;
+  }
+
+  .menu a {
+    float: left;
+    width: 100px;
+    text-align: center;
+  }
+
+  .menu li {
+    padding: 10px 10px;
+    border: 4px solid black;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .menu a:hover {
+    color: white;
+    border-color: white;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .container {
+    width: 768px;
+  }
+}
+
+.break {
+  background: url("https://bikcraft.com/wp-content/uploads/2015/10/bg-footer.jpg")
+    no-repeat center;
+  background-size: cover;
+  height: 220px;
+  width: 100%;
+}
+
+.break cite {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.break {
+  width: 100%;
+  min-width: 200px;
+  overflow: hidden;
+  height: 220px;
+  text-align: center;
+  color: white;
+  padding-top: 40px;
+}
+
+.break p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  font-style: italic;
+  max-width: 300px;
+  line-height: 20px;
+  margin: 0 auto;
+  margin-top: 15px;
+  color: white;
+}
+
+.break p::before {
+  content: "";
+  display: block;
+  width: 60px;
+  margin: 0 auto;
+  height: 3px;
+  background: #ffffff;
+  margin-bottom: 14px;
+}
+
+.break p::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 60px;
+  height: 3px;
+  margin-top: 14px;
+  margin-bottom: 10px;
+  background: #ffffff;
+}
+
+.break blockquote {
+  max-width: 400px;
+}
+
+@media (max-width: 768px) {
+  .lista-qualidade {
+    grid-template-columns: 1fr;
+    padding-bottom: 5px;
+  }
+
+  .lista-qualidade li p {
+    padding-bottom: 30px;
+  }
+}
+
+.footerprincipal {
+  background: black;
+  padding-bottom: 40px;
+  min-width: 200px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.footerprincipal .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 20px auto;
+}
+
+.footerprincipal .grid-8 {
+  width: 460px;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footerprincipal .grid-4 {
+  width: 220px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footerprincipal h3 {
+  color: #fec63e;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+.footerprincipal h3::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 3px;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  background: #fec63e;
+}
+
+.footerprincipal p {
+  color: white;
+}
+
+.footerprincipal span {
+  color: white;
+}
+
+.footerprincipal img {
+  border: 3px solid #fec63e;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.historia {
+  padding-right: 40px;
+}
+
+.historia p,
+.contato p,
+.redes_sociais p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  color: white;
+  line-height: 20px;
+}
+
+.historia span,
+.contato span,
+.redes_sociais span {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  color: white;
+  line-height: 20px;
+}
+
+.historia span,
+.contato span,
+.redes_sociais span {
+  display: inline-block;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.footersecundaria {
+  background: #fec63e;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-around;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .footerprincipal .grid-4 {
+    width: 172px;
+  }
+
+  .footerprincipal .grid-4 {
+    width: 172px;
+  }
+
+  .footerprincipal .grid-8 {
+    width: 364px;
+    margin-right: 50px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footerprincipal .container {
+    grid-template-columns: 1fr;
+  }
+
+  .footerprincipal .grid-4 span,
+  .footerprincipal .grid-8 span {
+    width: 300px;
+    margin: 0 0 20px 0;
+    float: none;
+  }
+
+  .contato {
+    margin-bottom: 20px;
+  }
+}
+
+/* ANIMATIONS */
+
+.comeco h1 {
+  transition: 0.3s all ease;
+  animation-duration: 1s;
+  animation-name: load, movimentation;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.comeco p {
+  transition: 0.3s all ease;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-name: load, movimentation1;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#feedback {
+  animation-duration: 1s;
+  animation-name: load, movimentation2;
+  animation-delay: 1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes load {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes movimentation {
+  from {
+    transform: translate3d(0, -70%, 0);
+  }
+}
+
+@keyframes movimentation1 {
+  from {
+    transform: translate3d(0, -70%, 0);
+  }
+}
+
+@keyframes movimentation2 {
+  from {
+    transform: translate3d(0, -20%, 0);
+  }
+}
+
+@keyframes formMove {
+  from {
+    transform: translate3d(0, -7%, 0);
+  }
+}
